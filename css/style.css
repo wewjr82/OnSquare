@@ -52,8 +52,8 @@ footer {
   display: inline-flex;
 }
 
-footer{
-  padding: 10px;
+footer {
+  padding: 5px;
 }
 
 /******************************************
@@ -572,7 +572,7 @@ hr {
 }
 
 /* SERVICES */
-.services{
+.services {
   position: relative;
 }
 
@@ -624,25 +624,27 @@ hr {
 
 /* EMAIL FORM */
 .email_form_box {
-  background-image:linear-gradient(rgba(0, 0, 0, 0.63), rgba(0, 0, 0, 0.623)), url("/images/christina-wocintechchat-com-4PU-OC8sW98-unsplash.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.63), rgba(0, 0, 0, 0.623)),
+    url("/images/christina-wocintechchat-com-4PU-OC8sW98-unsplash.jpg");
   background-color: rgba(0, 0, 0, 0.18);
   width: 100%;
-    height: 100vh;
-    position: absolute;
-    z-index: -1;  
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin-top: 20px;
+  height: 100vh;
+  position: absolute;
+  z-index: -1;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 20px;
+  
 }
 
-.email_form_box::before{
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    backdrop-filter: blur(5px);
+.email_form_box::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  backdrop-filter: blur(5px);
 }
 
 .email_form {
@@ -692,11 +694,8 @@ hr {
 }
 
 /* PROJECT PAGE */
-.project-page{
+.project-page {
   padding: 0 20px;
-  border: 2px solid red;
-  
-  
 }
 
 .project_page_header {
@@ -711,31 +710,126 @@ hr {
   font-family: "Noto Serif HK", serif;
 }
 
-.project-page img{
-  width: 50%;
-  margin-left: 25%;
-  
+/* START OF GALLERY */
+.container {
+  position: relative;
+  width: 1160px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  transform-style: preserve-3d;
+  perspective: 500px;
+  margin: auto;
+  padding-bottom: 20px;
 }
+.container .box {
+  position: relative;
+  width: 275px;
+  height: 275px;
+  background: #000;
+  transition: 0.5s;
+  transform-style: preserve-3d;
+  overflow: hidden;
+  margin-right: 15px;
+  margin-top: 45px;
+}
+.container:hover .box {
+  transform: rotateY(25deg);
+}
+.container .box:hover ~ .box {
+  transform: rotateY(-25deg);
+}
+.container .box:hover {
+  transform: rotateY(0deg) scale(1.25);
+  z-index: 1;
+  box-shadow: 0 25px 40px rgba(0, 0, 0, 0.5);
+}
+.container .box .imgBx {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.container .box .imgBx:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgb(69, 69, 69), #000000);
+  z-index: 1;
+  opacity: 0;
+  transition: 0.5s;
+  mix-blend-mode: multiply;
+}
+.container .box:hover .imgBx:before {
+  opacity: 1;
+}
+.container .box .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(2);
+  -webkit-filter: grayscale(2);
+}
+.container .box .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  padding: 20px;
+  align-items: flex-end;
+  box-sizing: border-box;
+}
+.container .box .content h2 {
+  color: #e0ab18;
+  transition: 0.5s;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  font-size: 20px;
+  transform: translateY(200px);
+  transition-delay: 0.3s;
+}
+.container .box:hover .content h2 {
+  transform: translateY(0px);
+}
+.container .box .content p {
+  color: #e0ab18;
+  transition: 0.5s;
+  font-size: 14px;
+  transform: translateY(200px);
+  transition-delay: 0.4s;
+}
+.container .box:hover .content p {
+  transform: translateY(0px);
+}
+/* END OF GALLERY */
 
-.project-page p{
+.project-page p {
   color: #e0ab18;
   font-family: "Source Sans 3", sans-serif;
+  font-size: 20px;
   font-weight: 700;
   font-style: italic;
   line-height: 24px;
   text-align: center;
+  margin: 0;
 }
 
-.project-page li{
+.back-home{
   color: #e0ab18;
-  font-family: "Source Sans 3", sans-serif;
-  font-weight: 700;
-  line-height: 24px;
-  text-align: center;
-  list-style: none;
 }
+/* END OF PROJECT PAGE */
 
-.copyright{
+.copyright {
   color: #e0ab18;
 }
 
