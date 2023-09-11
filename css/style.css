@@ -1,3 +1,8 @@
+/* Box Model Hack */
+* {
+  box-sizing: inherit; 
+}
+
 html,
 body {
   height: 100%;
@@ -45,6 +50,7 @@ footer {
 
 header {
   padding: 20px;
+  width: 100%;
 }
 
 .home {
@@ -55,6 +61,12 @@ header {
   height: 100vh;
   display: inline-flex;
 }
+
+/* .about{
+  width: 100%;
+} */
+
+
 
 footer {
   position: fixed;
@@ -147,6 +159,7 @@ header #menu label:before {
 }
 
 /* HOME */
+
 .home .home_box {
   background-color: rgba(247, 247, 247, 0.549);
   margin: auto 0px;
@@ -374,7 +387,7 @@ textarea {
 .send-button {
   margin-top: 15px;
   height: 34px;
-  width: 425px;
+  width: 400px;
   overflow: hidden;
   transition: all 0.2s ease-in-out;
   background-color: #e0ab18;
@@ -404,6 +417,7 @@ i.fas.fa-paper-plane {
 /* Begin Right Contact Page */
 .direct-contact-container {
   max-width: 400px;
+  margin-left: 15px;
 }
 
 /* Location, Phone, Email Section */
@@ -411,6 +425,7 @@ i.fas.fa-paper-plane {
   list-style-type: none;
   margin-left: -30px;
   padding-right: 20px;
+
 }
 
 .list-item {
@@ -776,6 +791,195 @@ hr {
 /******************************************
 /* MOBILE STYLES
 /*******************************************/
+@media screen and (max-width: 400px) {
+  header {
+    padding: 5px;
+  }
+
+  .home {
+    display: flex;
+    height: auto;
+  }
+
+  header h1 {
+    font-size: 20px;
+    line-height: 40px;
+    padding: 5px;
+  }
+
+  .home span {
+    font-size: 16px;
+  }
+
+  .home p {
+    font-size: 12px;
+  }
+
+  .about {
+    padding: 10px;
+    column-gap: 5px;
+  }
+
+  .about_header {
+    padding: 5px;
+  }
+
+  .about .about_title {
+    font-size: 24px;
+  }
+
+  .about .about_info {
+    padding: 0 5px;
+    text-align: center;
+    align-items: center;
+  }
+
+  .about span {
+    font-size: 28px;
+  }
+
+  .about p {
+    font-size: 12px;
+  }
+
+  .about .owners {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .section-header {
+    font-size: 40px;
+  }
+
+  .form_header {
+    padding: 5px;
+  }
+
+  .form_title {
+    font-size: 20px;
+  }
+
+  .send-button {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .alt-send-button {
+    width: 100%;
+  }
+
+  .contact-wrapper {
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  .contact-text {
+    font: 14px "Lato", sans-serif;
+    letter-spacing: 0.5px;
+  }
+
+  .place {
+    margin-left: 20px;
+  }
+
+  .phone {
+    margin-left: 16px;
+  }
+
+  .gmail {
+    margin-left: 14px;
+  }
+
+  .services{
+    padding: 10px;
+  }
+
+  .services-header {
+    font-size: 30px;
+    letter-spacing: 2px;
+  }
+
+  .services_title {
+    font-size: 24px;
+  }
+
+  .services_info {
+    padding: 0 5px;
+    margin-bottom: 10px;
+  }
+
+  .services_info p {
+    font-size: 16px;
+    line-height: 24px;
+    padding: 0 5px;
+    margin-bottom: 3px;
+  }
+
+  .services_info span {
+    line-height: 24px;
+    padding: 0 5px;
+  }
+
+  .services_info ul {
+    width: 100%;
+  }
+
+  .services_info ul li {
+    font-size: 16px;
+    line-height: 18px;
+    text-align: left;
+  }
+
+  /* Email form box */
+  .email_form_box {
+    display: none;
+
+    /* Email form */
+    .email_form {
+      width: 100%;
+      max-width: unset;
+      margin: 0 auto;
+      height: 100%;
+    }
+
+    /* Email form input */
+    .email_form input {
+      width: 100%;
+    }
+
+    .email_form button {
+      font-size: 14px;
+    }
+
+    .project-page {
+      padding: 0 5px 10px;
+    }
+
+    .project_page_header {
+      padding: 0 5px;
+      margin-bottom: 5px;
+    }
+
+    .project_page_title {
+      font-size: 20px;
+    }
+
+    .project-page {
+      padding: 0 5px 10px;
+    }
+
+    .project_page_header {
+      padding: 0 5px;
+      margin-bottom: 5px;
+    }
+
+    .project_page_title {
+      font-size: 20px;
+    }
+  }
+}
+
 @media screen and (max-width: 768px) {
   header {
     padding: 10px;
@@ -864,7 +1068,18 @@ hr {
     font-size: 30px;
   }
 
-  .section-header {
+   .send-button {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  
+
+  .services{
+    padding: 0 10px;
+  }
+
+  .services-header {
     font-size: 40px;
     letter-spacing: 4px;
   }
@@ -897,6 +1112,23 @@ hr {
     font-size: 18px;
     line-height: 24px;
     text-align: center;
+  }
+
+  .contact-text {
+    font: 16px "Lato", sans-serif;
+    letter-spacing: 1px;
+  }
+
+  .place {
+    margin-left: 32px;
+  }
+
+  .phone {
+    margin-left: 28px;
+  }
+
+  .gmail {
+    margin-left: 26px;
   }
 
   .email_form {
@@ -1062,7 +1294,7 @@ hr {
   }
 }
 
-@media screen and (max-width: 569px) {
+@media screen and (max-width: 589px) {
   .direct-contact-container,
   .form-wrapper {
     float: none;
